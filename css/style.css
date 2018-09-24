@@ -1,0 +1,446 @@
+/* Selection Style */
+::-moz-selection { /* Code for Firefox */
+    background: #8e2de2;
+}
+::selection {
+    background: #8e2de2;
+}
+
+/* Custom Scrollbar */
+/* Width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: lightgrey;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.6);
+} 
+body  {
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+button  {
+    cursor: pointer;
+    font-size: 23px;
+    width: 120px;
+    height: 45px;
+    border: 0;
+    border-radius: 20px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: white;
+    margin-top: 10px;
+    box-shadow: -4px 5px 5px rgba(0, 0, 0, 0.3);  
+}
+button:hover {
+    border: 2px solid #4a00e0;
+}
+i {
+    color: grey;
+}
+i:hover {
+    color: #4a00e0;
+}
+/*** Map and List Container ***/
+.container-fluid {
+    margin: 0;
+    padding: 0 15px 0 15px;
+}
+.col-sm-8,
+.col-sm-7,
+.col-sm-5,
+.col-sm-5 {
+    padding: 0;
+    margin: 0;
+}
+
+/*** Map ***/
+#map {
+    height: 100vh;
+}
+
+
+/*** Lists Style ***/
+ul {
+    list-style: none;
+}
+
+/*** Restaurants List ***/
+.sort{
+    background: #8e2de2; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #8e2de2, #4a00e0); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #8e2de2, #4a00e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-align: center;
+    color: #fff;
+    font-size: 27px;
+    font-family: Helvetica;
+    padding: 20px 0 20px 0;
+  	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); 
+}
+#sort {
+    background-color: rgba(255,255,255,0.9);
+    color: rgba(0,0,0,0.8);
+    border: 1px solid transparent;
+    border-radius: 7px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+    height: 40px; 
+}
+.name {
+    font-size: 22px;
+}
+.list-section{
+    background-color: rgba(255, 255, 255, 0.3);
+  	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1); 
+  	border-radius: 2px;
+    height: 100vh;
+}
+#list-results {
+    width: 100%;
+    height: 70vh;
+    overflow: auto;
+    cursor: pointer;
+    overflow-x: hidden;
+    font-size: 1.7rem;
+}
+.right-list{
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    margin-left: -25px;
+    border-bottom: 1px solid lightgrey;
+}
+.placeIcon img {
+    width: 100px;
+    height: 90px;
+    margin-left: -15px;
+    margin-right: 15px;
+}
+#rating {
+    font-size: 13px;
+}
+#button-hide {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+#button-hide:hover {
+    color: blue;
+}
+/*** Review and Street View Section Style ***/
+.restaurant{
+    background-color: white; /*** Review Section Background color ***/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 10px;
+    text-align: left;
+}
+#name{
+    color: rgba(0, 0, 0, 0.8);
+}
+#name:hover {
+    color: blue;
+}
+#address {
+    font-size: 20px;
+    color: rgba(0,0,0,0.7);
+}
+#telephone {
+    font-size: 18px;
+    color: rgba(0,0,0,0.5);
+}
+.title {
+    font-size: 25px;
+    color: rgba(0, 0, 0, 0.8); 
+    text-align: center;
+    letter-spacing: 2px;
+}
+.restaurant-reviews {
+    border-bottom: 1px solid lightgrey;
+}
+.rating{
+    font-size:25px;
+    color:yellow;
+}
+.user-avatar{
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:10px;
+}
+.review-title{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/*** Street View Style ***/
+#pano {
+    width: 25vw;
+    height: 20vh;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+/*** InfoWindow Style ***/
+#info-window{
+    max-width:300px;
+}
+#rating-details{
+    color: yellow;
+    font-size: 25px;
+    text-align: center;
+    margin:0;
+}
+#info-url {
+    font-size: 20px;
+    text-align: center;
+}
+#info-url a {
+    color: black;
+}
+#info-url a {
+    text-decoration:none;
+}
+#info-url a:hover{
+    color:#ea9693;
+    text-decoration:underline;
+}
+#info-content .gm-style .photo{
+    width: 100%;
+}
+.info-window_table_icon {
+    text-align: right;
+}
+#info-window-photo{
+    font-weight:bold;
+    text-align: center;
+}
+
+/*** Add a review Form Style ***/
+.form {
+    text-align: center;
+}
+input {
+    margin-bottom: -12px;
+    border-radius: 17px;
+    height: 30px !important;
+}
+textarea {
+    resize: none;
+    border-radius: 18px;
+ }
+textarea, input {
+    border: 1px solid transparent;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1); 
+}
+textarea:focus, input:focus {
+    outline: transparent;
+}
+
+
+#add-review{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#your-review{
+    height: 70px;
+    font-size: 12px;
+    padding: 5px;
+}
+#your-rating{
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+.main-button{
+    height: 40px;
+    width: 70%;
+    margin-bottom: 5px;
+}
+.main-button a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.review-header{
+    display:flex;
+    justify-content: space-between;
+}
+#add-review label{
+    font-size: 18px;
+    margin: 10px;
+}
+#add-review input,
+#add-review textarea{
+    width: 100%;
+    max-width: 280px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 15px;    
+    cursor: pointer;
+}
+
+#info-content-small{
+    font-size:13px;
+}
+#info-window-photo-small .gm-style .photo{
+    width:50px;
+    height:35px;
+}
+#info-window-photo .photo{
+    width: 150px;
+    height: 120px;
+}
+
+#info-content-small .photo{
+    height: 35px;
+    width: 50px;
+}
+#rating-details-small{
+    color: yellow;
+    margin:0;
+}
+#info-url-small, .reviews-link{
+    text-decoration: none;
+    color: grey;
+}
+.reviews-link:hover{
+    text-decoration: underline;
+}
+
+#info-reviews{
+    color: black;
+    text-decoration:none;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    padding-top: 10px;
+}
+#info-reviews:hover{
+    color:grey;
+    text-decoration:underline;
+}
+
+/*** Add new restaurant InfoWindow Form ***/
+#add-restaurant{
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 13px;
+}
+#add-restaurant input{
+    height: 20px;
+    width: 100%;
+    max-width: 280px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    font-size: 15px;
+}
+#add-restaurant select{
+    margin: 10px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+}
+#more{
+    display: none;
+}
+#more:hover, #btn-submit:hover{
+    background-color: pink;
+}
+#add-new-restaurant-btn {
+    width: 70%;
+    height: 3rem;
+    background-color: #c48583;
+    padding: 10px;
+}
+#add-new-restaurant-btn:hover {
+    background-color: #bc8f8d;
+    cursor: pointer;
+}
+#photo {
+    margin: 2px 20% 2px 20%;
+    padding: 0;
+    width: 150px;
+    text-align: center;
+}
+.place-api-photo {
+    width: 150px !important;
+    height: 150px;
+}
+.add-rate{
+    display: inline;
+    white-space: nowrap;
+}
+
+/* Media Query */
+@media only screen and (max-width: 1000px) {
+        #pano {
+        width: 45vw;
+        left: 25%;
+    }
+    #add-restaurant{
+        max-width: 50vw;
+    }
+        button {
+        font-size: 16px;
+    }
+}
+@media only screen and (min-width: 420px and max-width: 576px) {
+    #pano {
+        width: 70vw;
+        left: 40%;
+    }
+    #add-restaurant{
+        max-width: 40vw;
+    }
+    button {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 419px) {
+    #pano {
+        width: 78vw;
+        left: 43%;
+    }
+    #add-restaurant{
+        max-width: 60vw;
+    }
+    button {
+        font-size: 15px;
+    }
+}
